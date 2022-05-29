@@ -5,6 +5,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    base: '/mo2-scribing/'
+  }
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mo2-scribing',
