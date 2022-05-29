@@ -23,7 +23,7 @@ export const Helpers = {
 
       const gold = Math.floor(price / 100);
 
-      const silver = price > 100 ? price % 100 : 0;
+      const silver = price > 100 ? price % 100 : price;
 
       let output = "";
       if (gold > 0) {
