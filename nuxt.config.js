@@ -7,7 +7,7 @@ export default {
 
   router: {
     base: '/mo2-scribing/'
-  }
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
