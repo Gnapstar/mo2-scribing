@@ -92,7 +92,7 @@ export const state = {
       min: 30,
       max: 55,
       chance: 0,
-      price: 500,
+      price: 700,
       location: "Risar Dungeon",
     }, {
       spell: "Mind Blast",
@@ -108,7 +108,7 @@ export const state = {
       min: 35,
       max: 60,
       chance: 0,
-      price: 70,
+      price: 150,
       location: "",
     }, {
       spell: "Thunderlash",
@@ -132,7 +132,7 @@ export const state = {
       min: 50,
       max: 75,
       chance: 0,
-      price: 400,
+      price: 500,
       location: "Bandit Healer",
     }, {
       spell: "Greater Heal",
@@ -140,7 +140,7 @@ export const state = {
       min: 50,
       max: 75,
       chance: 0,
-      price: 800,
+      price: 500,
       location: "Bandit Healer",
     }, {
       spell: "Fulmination",
@@ -156,7 +156,7 @@ export const state = {
       min: 60,
       max: 85,
       chance: 0,
-      price: 20000,
+      price: 17500,
       location: "Sator Dungeon",
     }, {
       spell: "Flame Strike",
@@ -172,7 +172,7 @@ export const state = {
       min: 70,
       max: 100,
       chance: 0,
-      price: 700,
+      price: 800,
       location: "Bandit Caster",
     }, {
       spell: "Earthquake",
@@ -180,7 +180,7 @@ export const state = {
       min: 75,
       max: 100,
       chance: 0,
-      price: 8500,
+      price: 9000,
       location: "Veteran Bandit Caster, Alchemist Bowman, Illusionist",
     }, {
       spell: "Resurrect",
@@ -196,7 +196,7 @@ export const state = {
       min: 80,
       max: 100,
       chance: 0,
-      price: 0,
+      price: 3000,
       location: "Spiritism Trader (Forest Troll Head)",
     }
   ]
