@@ -116,7 +116,13 @@ export default {
     },
 
     totalPrice() {
-      return this.items.reduce((prev, current) => prev + current.price, 0);
+      return this.items.reduce((prev, current) => {
+        if (typeof current.price !== "number") {
+          return prev;
+        }
+
+        return prev + current.price
+      }, 0);
     }
   },
 
