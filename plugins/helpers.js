@@ -2,18 +2,22 @@ export const Helpers = {
   methods: {
     schoolColor(school) {
       if (school === "Ecumenical") {
-        return "text-primary";
+        return "text-ecumenical";
       }
 
       if (school === "Spiritism") {
-        return "text-danger";
+        return "text-spiritism";
+      }
+
+      if (school === "Necromancy") {
+        return "text-necromancy";
       }
 
       return "text-dark";
     },
 
     chanceColor(chance) {
-      return `background-color: hsl(${(120 - (1 - (chance / 100)) * 120)}, 78%, 63%)`;
+      return `background-color: hsl(${(120 - (1 - (chance / 100)) * 120)}, 60%, 60%); color: #000000;`;
     },
 
     formatPrice(price) {

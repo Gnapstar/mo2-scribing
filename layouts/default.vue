@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column min-vh-100">
-    <b-navbar toggleable="lg" type="dark" variant="dark">
+    <b-navbar toggleable="lg" type="dark">
       <b-container>
         <b-navbar-brand href="#">
           <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="Kitten">
@@ -18,7 +18,7 @@
         </b-collapse>
 
         <b-nav-form class="ml-md-auto d-block d-md-inline-block w-100 w-md-auto">
-          <div class="text-white mr-2">Scribe Level:</div>
+          <div class="text-white mr-2">My Scribe Level:</div>
           <b-form-input
             aria-label="Scribe level"
             type="number"
@@ -35,7 +35,7 @@
       <Nuxt />
     </div>
 
-    <footer class="mt-auto bg-light">
+    <footer class="mt-auto">
       <b-container class="py-4 text-center">
         Made by [Pergite] fader 🎉 Discord: ErikSouth#1567
       </b-container>

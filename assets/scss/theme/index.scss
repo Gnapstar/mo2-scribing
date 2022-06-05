@@ -1,0 +1,92 @@
+body {
+  color: #ffffff;
+  font-family: 'Vollkorn SC', serif;
+}
+
+/**
+ * Navbar
+ */
+.navbar {
+  padding: 0;
+  border-bottom: 1px solid #3f3c3b;
+
+  .nav-link {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .nuxt-link-exact-active {
+    background: $nav-tabs-link-active-bg;
+    color: #ffffff !important;
+  }
+}
+
+/**
+ * Tabs
+ */
+.nav-tabs {
+  border-top: 1px solid #3f3c3b;
+  border-bottom: 1px solid #3f3c3b;
+
+  .nav-link {
+    color: $nav-link-color;
+
+    &:hover {
+      color: $nav-link-hover-color;
+    }
+  }
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  background: $nav-tabs-link-active-bg;
+  color: #ffffff;
+}
+
+/**
+ * Cards
+ */
+.card-header {
+  background: $card-header-bg;
+  color: $card-header-color;
+}
+
+/**
+ * Tables
+ */
+.table {
+  background-color: #21211f;
+
+  th {
+    color: #ffffff;
+    font-weight: normal;
+  }
+
+  thead th,
+  th,
+  td {
+    border-color: #3f3c3b;
+  }
+}
+
+/**
+ * Modals
+ */
+.modal-header {
+  background: $modal-header-bg;
+}
+
+/**
+ * Schools
+ */
+.text-ecumenical {
+  color: #0d6efd;
+}
+
+.text-spiritism {
+  color: $danger;
+}
+
+.text-necromancy {
+  color: #5d646c;
+}

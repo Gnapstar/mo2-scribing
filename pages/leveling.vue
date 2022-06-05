@@ -48,64 +48,106 @@
       </div>
     </div>
 
-    <b-table
-      :items="levelTable"
-      :fields="fields"
-      small
-      striped
-      hover
-      responsive
-    >
-      <template #cell(cheapestScroll)="data">
-        <template v-if="data.item.cheapestScroll.price">
-          <b-button
-            v-b-modal="`info-${data.item.cheapestScroll.uuid}`"
-            variant="link"
-            class="p-0"
-          >
-            {{ formatPrice(data.item.cheapestScroll.price) }}
-          </b-button>
-          <b-modal
-            :id="`info-${data.item.cheapestScroll.uuid}`"
-            title="Available Scrolls"
-            ok-only
-            body-class="p-0"
-          >
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>Scroll</th>
-                  <th>Min</th>
-                  <th>Max</th>
-                  <th>Cost</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  v-for="(scroll, index) in data.item.cheapestScroll.availableScrolls"
-                  :key="`scroll-${index}`"
-                  :class="scroll.price === data.item.cheapestScroll.price ? 'bg-warning' : ''"
-                >
-                  <td>{{ scroll.spell }}</td>
-                  <td>{{ scroll.min }}</td>
-                  <td>{{ scroll.max }}</td>
-                  <td>{{ formatPrice(scroll.price) }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </b-modal>
-        </template>
-        <span v-else>{{ formatPrice(data.item.cheapestScroll.price) }}</span>
-      </template>
+    <b-tabs content-class="mt-3">
+      <b-tab title="Leveling Table" active>
+        <b-table
+          v-if="levelTable.length > 0"
+          :items="levelTable"
+          :fields="levelFields"
+          small
+          striped
+          hover
+          responsive
+        >
+          <template #cell(cheapestScroll)="data">
+            <template v-if="data.item.cheapestScroll.price">
+              <b-button
+                v-b-modal="`info-${data.item.cheapestScroll.uuid}`"
+                variant="link"
+                class="p-0 text-warning"
+              >
+                {{ formatPrice(data.item.cheapestScroll.price) }}
+              </b-button>
+              <b-modal
+                :id="`info-${data.item.cheapestScroll.uuid}`"
+                title="Available Scrolls"
+                ok-only
+                hide-header-close
+                header-class="d-flex justify-content-center"
+                body-class="p-0"
+              >
+                <table class="table table-hover mb-0">
+                  <thead>
+                    <tr>
+                      <th>Scroll</th>
+                      <th>Min</th>
+                      <th>Max</th>
+                      <th>Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      v-for="(scroll, index) in data.item.cheapestScroll.availableScrolls"
+                      :key="`scroll-${index}`"
+                      :class="{
+                        'bg-warning': scroll.price === data.item.cheapestScroll.price
+                      }"
+                    >
+                      <td>{{ scroll.spell }}</td>
+                      <td>{{ scroll.min }}</td>
+                      <td>{{ scroll.max }}</td>
+                      <td>{{ formatPrice(scroll.price) }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </b-modal>
+            </template>
+            <span v-else>{{ formatPrice(data.item.cheapestScroll.price) }}</span>
+          </template>
 
-      <template #cell(costForLevel)="data">
-        {{ formatPrice(data.item.costForLevel) }}
-      </template>
+          <template #cell(costForLevel)="data">
+            {{ formatPrice(data.item.costForLevel) }}
+          </template>
 
-      <template #cell(costToLevel)="data">
-        {{ formatPrice(data.item.costToLevel) }}
-      </template>
-    </b-table>
+          <template #cell(costToLevel)="data">
+            {{ formatPrice(data.item.costToLevel) }}
+          </template>
+        </b-table>
+
+        <b-alert v-else variant="success" show>
+          Amazing! You've maxed the Scribing profession!
+        </b-alert>
+      </b-tab>
+      <b-tab title="Scrolls">
+        <b-table
+          v-if="scrollsTable.length > 0 && scribeLevel < 100"
+          :items="scrollsTable"
+          :fields="scrollsFields"
+          small
+          striped
+          hover
+          responsive
+        >
+          <template #cell(school)="data">
+            <span
+              class="text-left text-nowrap pr-3"
+              :class="schoolColor(data.item.school)"
+            >
+              {{ data.item.school }}
+            </span>
+          </template>
+
+          <template #cell(price)="data">
+            <span>{{ formatPrice(data.item.price) }}</span>
+          </template>
+        </b-table>
+
+        <b-alert v-else variant="success" show>
+          Amazing! You've maxed the Scribing profession!
+        </b-alert>
+      </b-tab>
+    </b-tabs>
+
   </b-container>
 </template>
 
@@ -125,7 +167,7 @@ export default {
       costs: {
         scribeBook: 2000,
       },
-      fields: [
+      levelFields: [
         { key: "from", class: "col-shrink text-right" },
         { key: "to", class: "col-shrink text-right" },
         { key: "experience", class: "text-right" },
@@ -133,7 +175,15 @@ export default {
         { key: "scrollsForLevel", class: "text-right" },
         { key: "costForLevel", class: "text-right" },
         { key: "costToLevel", class: "text-right" },
-      ]
+      ],
+
+      scrollsFields: [
+        { key: "spell" },
+        { key: "school" },
+        { key: "min", class: "col-shrink text-right" },
+        { key: "max", class: "col-shrink text-right" },
+        { key: "price" },
+      ],
     }
   },
 
@@ -165,6 +215,10 @@ export default {
           costToLevel: this.costToLevel(nextLevel),
         }
       });
+    },
+
+    scrollsTable() {
+      return this.spells.filter((spell) => spell.max >= this.scribeLevel);
     },
 
     costToMaxLevel() {
