@@ -100,6 +100,11 @@ export default {
     items() {
       const spells = JSON.parse(JSON.stringify(this.spells));
       spells.forEach((spell) => {
+        if ((typeof spell.min !== "number") || (typeof spell.max !== "number")) {
+          spell.chance = "-";
+          return true;
+        }
+
         let chance = (this.scribeLevel - spell.min) * (100 / (spell.max - spell.min));
         chance = Math.max(chance, 0);
         chance = Math.min(chance, 100);

@@ -90,6 +90,11 @@ export default {
 
       spells.forEach((spell) => {
         range.forEach((level) => {
+          if ((typeof spell.min !== "number") || (typeof spell.max !== "number")) {
+            spell[level] = "-";
+            return true;
+          }
+
           let chance = (level - spell.min) * (100 / (spell.max - spell.min));
           chance = Math.max(chance, 0);
           chance = Math.min(chance, 100);
