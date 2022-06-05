@@ -37,7 +37,7 @@
 
     <footer class="mt-auto bg-light">
       <b-container class="py-4 text-center">
-        Made by fader 🎉 Discord: ErikSouth#1567
+        Made by [Pergite] fader 🎉 Discord: ErikSouth#1567
       </b-container>
     </footer>
   </div>
