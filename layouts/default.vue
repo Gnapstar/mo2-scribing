@@ -13,7 +13,7 @@
           <b-navbar-nav>
             <NuxtLink class="nav-link" to="/">Scribing</NuxtLink>
             <NuxtLink class="nav-link" to="/chance">Chance Table</NuxtLink>
-            <NuxtLink class="nav-link" to="/leveling">Leveling Scribing</NuxtLink>
+            <NuxtLink class="nav-link" to="/leveling">Leveling Guide</NuxtLink>
           </b-navbar-nav>
         </b-collapse>
 
@@ -24,6 +24,7 @@
             type="number"
             min="0"
             max="100"
+            :state="!scribeLevel ? false : null"
             :value="scribeLevel"
             @input="setScribeLevel($event)"
           />
@@ -37,7 +38,14 @@
 
     <footer class="mt-auto">
       <b-container class="py-4 text-center">
-        Made by [Pergite] fader 🎉 Discord: ErikSouth#1567
+        <div>
+          Made by [Pergite] fader 🎉 Discord: ErikSouth#1567
+        </div>
+        <div>
+          <a href="https://github.com/Gnapstar/mo2-scribing" target="_blank" class="text-light">GitHub</a>
+          •
+          Not affiliated with Star Vault AB
+        </div>
       </b-container>
     </footer>
   </div>

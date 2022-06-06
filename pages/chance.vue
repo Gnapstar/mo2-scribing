@@ -4,6 +4,9 @@
       <div class="row align-items-end">
         <div class="col">
           <h1>Chance Table</h1>
+          <p class="mb-0">
+            The chance to scribe a certain scroll at a given scribe level.
+          </p>
         </div>
         <div class="col-auto">
           <b-form-checkbox-group

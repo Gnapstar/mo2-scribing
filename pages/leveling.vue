@@ -2,13 +2,7 @@
   <b-container>
     <div class="row">
       <div class="col-12 col-md">
-        <h1>Leveling Scribing</h1>
-        <b-form-checkbox
-          v-model="upcomingOnly"
-          class="mb-2 mb-md-0"
-        >
-          Only display from level {{ scribeLevel }}
-        </b-form-checkbox>
+        <h1>Leveling Guide</h1>
       </div>
       <div class="col-12 col-md-auto">
         <div class="card mb-2">
@@ -50,6 +44,22 @@
 
     <b-tabs content-class="mt-3">
       <b-tab title="Leveling Table" active>
+        <div class="row">
+          <div class="col">
+            <p>
+              Leveling scribing is a costly process that can be broken down into three parts. Read the scribing book to level 70, then scribe Greater Heal or Mental Healing to 75, and finish it off by scribing any of the available scrolls to 100 (Resurrect can be used from 75-100 and is available in the vendor for 10g/each).
+            </p>
+          </div>
+          <div class="col-auto d-flex align-items-end">
+            <b-form-checkbox
+              v-model="showAllLevels"
+              class="mb-2"
+            >
+              Show all levels
+            </b-form-checkbox>
+          </div>
+        </div>
+
         <b-table
           v-if="levelTable.length > 0"
           :items="levelTable"
@@ -119,6 +129,10 @@
         </b-alert>
       </b-tab>
       <b-tab title="Scrolls">
+        <p>
+          In order to level scribing, you need to scribe a scroll with a greater max chance than your current level. The table belows shows which scrolls you can use to level scribing further.
+        </p>
+
         <b-table
           v-if="scrollsTable.length > 0 && scribeLevel < 100"
           :items="scrollsTable"
@@ -162,7 +176,7 @@ export default {
 
   data() {
     return {
-      upcomingOnly: false,
+      showAllLevels: false,
       experiencePerScroll: 90,
       costs: {
         scribeBook: 2000,
@@ -194,9 +208,9 @@ export default {
     }),
 
     levelTable() {
-      const levels = [...Array(this.upcomingOnly ? 100 - this.scribeLevel : 100).keys()]
+      const levels = [...Array(!this.showAllLevels ? 100 - this.scribeLevel : 100).keys()]
       return levels.map((level) => {
-        const fromLevel = this.upcomingOnly ? this.scribeLevel + level : level;
+        const fromLevel = !this.showAllLevels ? this.scribeLevel + level : level;
         const nextLevel = fromLevel + 1;
 
         return {
@@ -284,7 +298,7 @@ export default {
         return 0;
       }
 
-      if (this.upcomingOnly && level <= this.scribeLevel) {
+      if (!this.showAllLevels && level <= this.scribeLevel) {
         return 0;
       }
 
