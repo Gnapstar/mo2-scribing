@@ -45,12 +45,12 @@
     <b-tabs content-class="mt-3">
       <b-tab title="Leveling Table" active>
         <div class="row">
-          <div class="col">
+          <div class="col-12 col-md">
             <p>
               Leveling scribing is a costly process that can be broken down into three parts. Read the scribing book to level 70, then scribe Greater Heal or Mental Healing to 75, and finish it off by scribing any of the available scrolls to 100 (Resurrect can be used from 75-100 and is available in the vendor for 10g/each).
             </p>
           </div>
-          <div class="col-auto d-flex align-items-end">
+          <div class="col-12 col-md-auto d-flex align-items-end">
             <b-form-checkbox
               v-model="showAllLevels"
               class="mb-2"

@@ -40,6 +40,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,6 +60,10 @@ export default {
 
   styleResources: {
     scss: '@/assets/scss/_variables.scss'
+  },
+
+  googleAnalytics: {
+    id: 'G-BEEYK54Z7W'
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
