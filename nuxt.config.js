@@ -28,7 +28,7 @@ export default {
         async: true,
       },
       {
-        src: "js/ga.js",
+        src: "/mo2-scribing/js/ga.js",
       }
     ]
   },
