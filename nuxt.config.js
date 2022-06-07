@@ -22,6 +22,15 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/mo2-scribing/favicon.jpg' }],
+    script: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-BEEYK54Z7W",
+        async: true,
+      },
+      {
+        src: "js/ga.js",
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -39,8 +48,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -60,10 +68,6 @@ export default {
 
   styleResources: {
     scss: '@/assets/scss/_variables.scss'
-  },
-
-  googleAnalytics: {
-    id: 'G-BEEYK54Z7W'
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
