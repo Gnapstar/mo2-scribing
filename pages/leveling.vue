@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 col-md">
         <h1>Leveling Guide</h1>
-        <p>This section describes how to level scribing from your current level to max. For more information regarding Magic in Mortal Online 2, please checkout <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2433160355" target="_blank" class="text-warning">Billbonty's Guide to Magic</a>.</p>
+        <p>This section describes how to level scribing from your current level to max. For more information regarding Magic in Mortal Online 2, please check out <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2433160355" target="_blank" class="text-warning">Billbonty's Guide to Magic</a>.</p>
       </div>
       <div class="col-12 col-md-auto">
         <div class="card mb-2">
