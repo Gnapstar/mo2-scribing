@@ -67,6 +67,17 @@ body {
   td {
     border-color: #3f3c3b;
   }
+
+  &.b-table {
+    thead > tr > th.b-table-sticky-column {
+      color: #ffffff;
+      background-color: #21211f;
+    }
+
+    tbody > tr > td.b-table-sticky-column {
+      background-color: #21211f;
+    }
+  }
 }
 
 /**
