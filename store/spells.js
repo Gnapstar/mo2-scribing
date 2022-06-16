@@ -1,346 +1,48 @@
+import { SPELLS } from "@/data/spells";
+
 export const namespaced = true;
 
-export const state = {
+export const state = () => ({
   schools: [
     "Ecumenical",
     "Spiritism",
     "Necromancy"
   ],
-  spells: [
-    {
-      spell: "Spurt",
-      school: "Ecumenical",
-      min: 0,
-      max: 15,
-      chance: 0,
-      price: 10,
-      location: "Magic Vendor",
-    }, {
-      spell: "Transcendental Seance",
-      school: "Spiritism",
-      min: 0,
-      max: 15,
-      chance: 0,
-      price: 100,
-      location: "Magic Vendor",
-    }, {
-      spell: "Lesser Heal",
-      school: "Ecumenical",
-      min: 0,
-      max: 25,
-      chance: 0,
-      price: 25,
-      location: "Magic Vendor",
-    }, {
-      spell: "Expel Spirit",
-      school: "Spiritism",
-      min: 0,
-      max: 25,
-      chance: 0,
-      price: 100,
-      location: "Magic Vendor",
-    }, {
-      spell: "Corruption",
-      school: "Ecumenical",
-      min: 5,
-      max: 30,
-      chance: 0,
-      price: 40,
-      location: "",
-    }, {
-      spell: "Kau Regeneration",
-      school: "Spiritism",
-      min: 10,
-      max: 35,
-      chance: 0,
-      price: 50,
-      location: "",
-    }, {
-      spell: "Purify",
-      school: "Ecumenical",
-      min: 15,
-      max: 35,
-      chance: 0,
-      price: 50,
-      location: "",
-    }, {
-      spell: "Lightning",
-      school: "Ecumenical",
-      min: 15,
-      max: 40,
-      chance: 0,
-      price: 50,
-      location: "",
-    }, {
-      spell: "Ether Momentum",
-      school: "Spiritism",
-      min: 20,
-      max: 45,
-      chance: 0,
-      price: 100,
-      location: "Minotaur Dungeon",
-    }, {
-      spell: "Outburst",
-      school: "Ecumenical",
-      min: 20,
-      max: 45,
-      chance: 0,
-      price: 100,
-      location: "",
-    }, {
-      spell: "Ether Barrier",
-      school: "Spiritism",
-      min: 30,
-      max: 55,
-      chance: 0,
-      price: 700,
-      location: "Risar Dungeon",
-    }, {
-      spell: "Mind Blast",
-      school: "Ecumenical",
-      min: 30,
-      max: 55,
-      chance: 0,
-      price: 70,
-      location: "Bandit Caster",
-    }, {
-      spell: "Magic Reflection",
-      school: "Ecumenical",
-      min: 35,
-      max: 60,
-      chance: 0,
-      price: 150,
-      location: "",
-    }, {
-      spell: "Thunderlash",
-      school: "Ecumenical",
-      min: 40,
-      max: 65,
-      chance: 0,
-      price: 70,
-      location: "Bandit Caster",
-    }, {
-      spell: "Transcendental Awareness",
-      school: "Spiritism",
-      min: 40,
-      max: 65,
-      chance: 0,
-      price: 500,
-      location: "Magic Vendor",
-    }, {
-      spell: "Mental Healing",
-      school: "Spiritism",
-      min: 50,
-      max: 75,
-      chance: 0,
-      price: 500,
-      location: "Bandit Healer",
-    }, {
-      spell: "Greater Heal",
-      school: "Ecumenical",
-      min: 50,
-      max: 75,
-      chance: 0,
-      price: 500,
-      location: "Bandit Healer",
-    }, {
-      spell: "Fulmination",
-      school: "Ecumenical",
-      min: 60,
-      max: 85,
-      chance: 0,
-      price: 1200,
-      location: "Bandit Caster",
-    }, {
-      spell: "Mental Projectile",
-      school: "Spiritism",
-      min: 60,
-      max: 85,
-      chance: 0,
-      price: 17500,
-      location: "Sator Dungeon",
-    }, {
-      spell: "Flame Strike",
-      school: "Ecumenical",
-      min: 70,
-      max: 95,
-      chance: 0,
-      price: 1000,
-      location: "Bandit Caster",
-    }, {
-      spell: "Dispel Portal",
-      school: "Spiritism",
-      min: 70,
-      max: 100,
-      chance: 0,
-      price: 800,
-      location: "Bandit Caster",
-    }, {
-      spell: "Earthquake",
-      school: "Ecumenical",
-      min: 75,
-      max: 100,
-      chance: 0,
-      price: 9000,
-      location: "Veteran Bandit Caster, Alchemist Bowman, Illusionist",
-    }, {
-      spell: "Resurrect",
-      school: "Spiritism",
-      min: 75,
-      max: 100,
-      chance: 0,
-      price: 1000,
-      location: "Magic Vendor",
-    }, {
-      spell: "Etherworld Portal",
-      school: "Spiritism",
-      min: 80,
-      max: 100,
-      chance: 0,
-      price: 3000,
-      location: "Spiritism Trader (Forest Troll Head)",
-    }, {
-      spell: "Raise Walker",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Raise Greater Walker",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Raise Strong Walker",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Control Undead",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Command Undead",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Benumb Mind",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Atrophy",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Death Hand",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Cloud of Ashes",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Miasma",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Akh Bond",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Blind",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Mental Leech",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Sacrificial Heal",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Auw Surge",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Crawling Hands",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    }, {
-      spell: "Sacrificial Eruption",
-      school: "Necromancy",
-      min: "-",
-      max: "-",
-      chance: 0,
-      price: "-",
-      location: "",
-    },
-  ]
-};
+  defaultSpells: JSON.parse(JSON.stringify(SPELLS)),
+  spells: []
+});
 
 export const getters = {
   getSchools: (state) => state.schools,
   getSpells: (state) => state.spells,
   getSpellsBySchools: (state) => (schools) => state.spells.filter((spell) => schools.includes(spell.school)),
 };
+
+export const mutations = {
+  load(state) {
+    const loadedSpells = localStorage.getItem('spells');
+    if (loadedSpells) {
+      state.spells = JSON.parse(loadedSpells);
+    } else {
+      state.spells = SPELLS;
+    }
+  },
+
+  reset(state) {
+    state.spells = JSON.parse(JSON.stringify(state.defaultSpells));
+    localStorage.removeItem('spells');
+  },
+
+  setPrice(state, data) {
+    const idx = state.spells.findIndex((spell) => spell.spell === data.spell);
+
+    if (idx > -1) {
+      const spell = state.spells[idx];
+      spell.price = data.price;
+
+      state.spells[idx] = spell;
+
+      localStorage.setItem('spells', JSON.stringify(state.spells));
+    }
+  }
+}

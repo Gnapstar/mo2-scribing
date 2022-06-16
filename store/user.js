@@ -1,8 +1,8 @@
 export const namespaced = true;
 
-export const state = {
+export const state = () => ({
   scribeLevel: 0,
-};
+});
 
 export const getters = {
   getScribeLevel: (state) => Number(state.scribeLevel),

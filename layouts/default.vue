@@ -14,6 +14,7 @@
             <NuxtLink class="nav-link" to="/">Scribing</NuxtLink>
             <NuxtLink class="nav-link" to="/chance">Chance Table</NuxtLink>
             <NuxtLink class="nav-link" to="/leveling">Leveling Guide</NuxtLink>
+            <NuxtLink class="nav-link" to="/configure">Configure</NuxtLink>
           </b-navbar-nav>
         </b-collapse>
 
@@ -60,6 +61,10 @@ export default {
     ...mapGetters({
       scribeLevel: "user/getScribeLevel",
     })
+  },
+
+  created() {
+    this.$store.commit("spells/load");
   },
 
   mounted() {
