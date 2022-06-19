@@ -74,7 +74,8 @@ export default {
           key: "school",
           tdClass: (value) => this.schoolColor(value)
         }, {
-          key: "priceInput"
+          key: "priceInput",
+          label: "Price (silver)"
         }, {
           key: "price",
         }, {

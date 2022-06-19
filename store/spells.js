@@ -38,7 +38,7 @@ export const mutations = {
 
     if (idx > -1) {
       const spell = state.spells[idx];
-      spell.price = data.price;
+      spell.price = parseInt(data.price);
 
       state.spells[idx] = spell;
 
