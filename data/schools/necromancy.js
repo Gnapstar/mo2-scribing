@@ -1,8 +1,8 @@
 export default [
   {
     spell: "Raise Walker",
-    min: "-",
-    max: "-",
+    min: 1,
+    max: 22,
     price: "-",
     location: "",
   }, {
@@ -25,8 +25,8 @@ export default [
     location: "",
   }, {
     spell: "Command Undead",
-    min: "-",
-    max: "-",
+    min: 3,
+    max: 16,
     price: "-",
     location: "",
   }, {
@@ -79,8 +79,8 @@ export default [
     location: "",
   }, {
     spell: "Sacrificial Heal",
-    min: "-",
-    max: "-",
+    min: 5,
+    max: 18,
     price: "-",
     location: "",
   }, {
