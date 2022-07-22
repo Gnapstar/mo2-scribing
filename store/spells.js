@@ -21,8 +21,16 @@ export const getters = {
 export const mutations = {
   load(state) {
     const loadedSpells = localStorage.getItem('spells');
+
     if (loadedSpells) {
-      state.spells = JSON.parse(loadedSpells);
+      state.spells = JSON.parse(loadedSpells).map((cachedSpell) => {
+        const sourceSpell = SPELLS.find((spell) => spell.spell === cachedSpell.spell);
+        if (!sourceSpell) {
+          return true;
+        }
+
+        return { ...sourceSpell, ...{ price: cachedSpell.price } };
+      }).flat();
     } else {
       state.spells = SPELLS;
     }
