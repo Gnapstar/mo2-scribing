@@ -13,8 +13,8 @@ export default [
     location: "",
   }, {
     spell: "Raise Strong Walker",
-    min: "-",
-    max: "-",
+    min: 19,
+    max: 37,
     price: "-",
     location: "",
   }, {
