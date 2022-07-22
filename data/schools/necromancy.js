@@ -4,31 +4,31 @@ export default [
     min: 1,
     max: 22,
     price: "-",
-    location: "",
+    location: "Necromancers at ruins",
   }, {
     spell: "Raise Greater Walker",
     min: "-",
     max: "-",
     price: "-",
-    location: "",
+    location: "Necromancers at ruins",
   }, {
     spell: "Raise Strong Walker",
     min: 19,
     max: 37,
     price: "-",
-    location: "",
+    location: "Necromancers at ruins",
   }, {
     spell: "Control Undead",
     min: "-",
     max: "-",
     price: "-",
-    location: "",
+    location: "Necromancers at ruins",
   }, {
     spell: "Command Undead",
     min: 3,
     max: 16,
     price: "-",
-    location: "",
+    location: "Necromancers at ruins",
   }, {
     spell: "Benumb Mind",
     min: "-",
@@ -46,7 +46,7 @@ export default [
     min: "-",
     max: "-",
     price: "-",
-    location: "",
+    location: "Necromancer in dungeon",
   }, {
     spell: "Cloud of Ashes",
     min: "-",
@@ -58,7 +58,7 @@ export default [
     min: "-",
     max: "-",
     price: "-",
-    location: "",
+    location: "Jungle camp, item to trade drops from Sators",
   }, {
     spell: "Akh Bond",
     min: "-",
@@ -70,7 +70,7 @@ export default [
     min: "-",
     max: "-",
     price: "-",
-    location: "",
+    location: "Descensus Priest",
   }, {
     spell: "Mental Leech",
     min: "-",
@@ -82,7 +82,7 @@ export default [
     min: 5,
     max: 18,
     price: "-",
-    location: "",
+    location: " Necromancers at ruins",
   }, {
     spell: "Auw Surge",
     min: "-",
@@ -100,7 +100,7 @@ export default [
     min: "-",
     max: "-",
     price: "-",
-    location: "",
+    location: " Necromancers at ruins",
   }
 ].map((spell) => {
   return {
