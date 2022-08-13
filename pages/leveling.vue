@@ -180,7 +180,7 @@ export default {
       showAllLevels: false,
       experiencePerScroll: 90,
       costs: {
-        scribeBook: 2000,
+        scribeBook: 15000,
       },
       levelFields: [
         { key: "from", class: "col-shrink text-right" },
