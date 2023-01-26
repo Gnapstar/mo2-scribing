@@ -21,12 +21,22 @@
       hover
       responsive
     >
+      <template #cell(spell)="data">
+        <b-form-checkbox
+          :checked="data.item.scribed"
+          @change="setScribed(data.item.spell, $event)"
+        >
+          {{ data.item.spell }}
+        </b-form-checkbox>
+      </template>
+
       <template #cell(chance)="data">
         {{ data.item.chance }}%
       </template>
 
       <template #custom-foot>
         <b-tr>
+          <b-td></b-td>
           <b-td></b-td>
           <b-td></b-td>
           <b-td></b-td>
@@ -131,5 +141,14 @@ export default {
       this.selectedSchools = this.schools;
     });
   },
+
+  methods: {
+    setScribed(spell, scribed) {
+      this.$store.commit("spells/setScribed", {
+        spell,
+        scribed
+      });
+    },
+  }
 }
 </script>

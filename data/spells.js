@@ -11,6 +11,7 @@ const SPELLS = [
     ...spell,
     ...{
       chance: 0,
+      scribed: false,
     },
   }
 }).sort((a, z) => {

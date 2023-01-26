@@ -29,7 +29,13 @@ export const mutations = {
           return true;
         }
 
-        return { ...sourceSpell, ...{ price: cachedSpell.price } };
+        return {
+          ...sourceSpell,
+          ...{
+            price: cachedSpell.price,
+            scribed: cachedSpell.scribed
+          }
+        };
       }).flat();
     } else {
       state.spells = SPELLS;
@@ -39,6 +45,19 @@ export const mutations = {
   reset(state) {
     state.spells = JSON.parse(JSON.stringify(state.defaultSpells));
     localStorage.removeItem('spells');
+  },
+
+  setScribed(state, data) {
+    const idx = state.spells.findIndex((spell) => spell.spell === data.spell);
+
+    if (idx > -1) {
+      const spell = state.spells[idx];
+      spell.scribed = data.scribed;
+
+      state.spells[idx] = spell;
+
+      localStorage.setItem('spells', JSON.stringify(state.spells));
+    }
   },
 
   setPrice(state, data) {
