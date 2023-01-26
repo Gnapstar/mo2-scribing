@@ -46,7 +46,7 @@
       You haven't selected any schools!
     </b-alert>
 
-    <em class="small">* Prices are estimated based upon the market value at the time checked</em>
+    <em class="small">* Prices are based upon estimated market trends</em>
   </b-container>
 </template>
 
