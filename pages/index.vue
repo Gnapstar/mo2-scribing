@@ -42,7 +42,7 @@
           <b-td></b-td>
           <b-td></b-td>
           <b-td>
-            <strong>
+            <strong class="text-nowrap">
               {{ formatPrice(totalPrice) }}*
             </strong>
           </b-td>
@@ -73,7 +73,8 @@ export default {
       selectedSchools: [],
       fields: [
         {
-          key: "spell"
+          key: "spell",
+          tdClass: "text-nowrap"
         }, {
           key: "school",
           tdClass: (value) => this.schoolColor(value)
@@ -88,7 +89,8 @@ export default {
           }
         }, {
           key: "price",
-          formatter: (value) => this.formatPrice(value)
+          formatter: (value) => this.formatPrice(value),
+          tdClass: "text-nowrap"
         }, {
           key: "location",
         },
