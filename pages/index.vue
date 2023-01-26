@@ -41,7 +41,6 @@
           <b-td></b-td>
           <b-td></b-td>
           <b-td></b-td>
-          <b-td></b-td>
           <b-td>
             <strong>
               {{ formatPrice(totalPrice) }}*
