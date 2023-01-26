@@ -75,7 +75,7 @@ export default [
     spell: "Earthquake",
     min: 75,
     max: 100,
-    price: 9000,
+    price: 5000,
     location: "Veteran Bandit Caster, Alchemist Bowman, Illusionist",
   }
 ].map((spell) => {

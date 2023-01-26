@@ -45,7 +45,7 @@ export default [
     spell: "Mental Projectile",
     min: 60,
     max: 85,
-    price: 17500,
+    price: 3500,
     location: "Sator Dungeon",
   }, {
     spell: "Dispel Portal",

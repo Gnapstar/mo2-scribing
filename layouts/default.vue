@@ -40,7 +40,7 @@
     <footer class="mt-auto">
       <b-container class="py-4 text-center">
         <div>
-          Made by [Pergite] fader 🎉 Discord: ErikSouth#1567
+          Made by [Pergite] fader 🎉 Discord: ErikSouth#1567 🎉 Special thanks to [MANA] Keg
         </div>
         <div>
           <a href="https://github.com/Gnapstar/mo2-scribing" target="_blank" class="text-light">GitHub</a>
