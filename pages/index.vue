@@ -5,10 +5,16 @@
         <h1>Scribing</h1>
       </div>
       <div class="col-auto">
-        <b-form-checkbox-group
+        <b-form-checkbox
+          v-for="school in schools"
+          :key="`school-${school}`"
+          name="selected-schools"
+          :value="school"
           v-model="selectedSchools"
-          :options="schools"
-        />
+          inline
+        >
+          {{ school }} <span class="text-muted">({{ getSpellsBySchools(school).length }})</span>
+        </b-form-checkbox>
       </div>
     </div>
 
@@ -102,6 +108,7 @@ export default {
     ...mapGetters({
       scribeLevel: "user/getScribeLevel",
       schools: "spells/getSchools",
+      getSpellsBySchools: "spells/getSpellsBySchools",
     }),
 
     spells() {
