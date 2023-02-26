@@ -1,13 +1,9 @@
-import { SPELLS } from "@/data/spells";
+import { SPELLS, SCHOOLS } from "@/data/spells";
 
 export const namespaced = true;
 
 export const state = () => ({
-  schools: [
-    "Ecumenical",
-    "Spiritism",
-    "Necromancy"
-  ],
+  schools: SCHOOLS,
   defaultSpells: JSON.parse(JSON.stringify(SPELLS)),
   spells: []
 });

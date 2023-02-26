@@ -13,6 +13,10 @@ export const Helpers = {
         return "text-necromancy";
       }
 
+      if (school === "Elementalism") {
+        return "text-elementalism";
+      }
+
       return "text-dark";
     },
 

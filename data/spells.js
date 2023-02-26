@@ -1,11 +1,20 @@
 import ECUMENICAL from "./schools/ecumenical";
 import SPIRITISM from "./schools/spiritism";
 import NECROMANCY from "./schools/necromancy";
+import ELEMENTALISM from "./schools/elementalism";
+
+const SCHOOLS = [
+  "Ecumenical",
+  "Spiritism",
+  "Necromancy",
+  "Elementalism"
+];
 
 const SPELLS = [
   ...ECUMENICAL,
   ...SPIRITISM,
-  ...NECROMANCY
+  ...NECROMANCY,
+  ...ELEMENTALISM
 ].map((spell) => {
   return {
     ...spell,
@@ -18,4 +27,4 @@ const SPELLS = [
   return (a.min + a.max) - (z.min + z.max);
 });
 
-export { SPELLS };
+export { SPELLS, SCHOOLS };
