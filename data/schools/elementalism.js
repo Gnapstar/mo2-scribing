@@ -1,152 +1,74 @@
 export default [
   {
-    spell: "Meteor",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Propulsion",
+    min: 0,
+    max: 20,
     price: "-",
     location: ""
   }, {
-    spell: "Swarm Glacier",
-    min: "-",
-    max: "-",
+    spell: "Elemental Aggregation Scroll",
+    min: 25,
+    max: 50,
     price: "-",
     location: ""
   }, {
-    spell: "Shard Fire",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Fire",
+    min: 0,
+    max: 20,
     price: "-",
     location: ""
   }, {
-    spell: "Protector Ice",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Earth",
+    min: 0,
+    max: 20,
     price: "-",
     location: ""
   }, {
-    spell: "Protector Storm",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Heat",
+    min: 15,
+    max: 30,
     price: "-",
     location: ""
   }, {
-    spell: "Protector Water",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Dust",
+    min: 20,
+    max: 35,
     price: "-",
     location: ""
   }, {
-    spell: "Protector Fire",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Water",
+    min: 0,
+    max: 20,
     price: "-",
     location: ""
   }, {
-    spell: "Wall Lightning",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Darkness",
+    min: 15,
+    max: 30,
     price: "-",
     location: ""
   }, {
-    spell: "Globe Chain",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Cold",
+    min: 15,
+    max: 30,
     price: "-",
     location: ""
   }, {
-    spell: "Lightning Hail",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Air",
+    min: 0,
+    max: 20,
     price: "-",
     location: ""
   }, {
-    spell: "Barrage Chaos",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Light",
+    min: 15,
+    max: 30,
     price: "-",
     location: ""
   }, {
-    spell: "Blast Water",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Rift Tornado Ice",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Shield Heat",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Wave Crushing",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Rock Cold",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Wave Peace Healing",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Rain Stone",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Wall Precipitation Earth",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Shiver Ice",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Wall Air",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "BurstHail",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Missile Light",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Orb Breathing",
-    min: "-",
-    max: "-",
-    price: "-",
-    location: ""
-  }, {
-    spell: "Sphere",
-    min: "-",
-    max: "-",
+    spell: "Scroll of Elemental Vapor",
+    min: 20,
+    max: 35,
     price: "-",
     location: ""
   }
