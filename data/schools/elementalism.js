@@ -71,6 +71,12 @@ export default [
     max: 35,
     price: "-",
     location: ""
+  }, {
+    spell: "Scroll of Elemental Direction",
+    min: 65,
+    max: 90,
+    price: "-",
+    location: ""
   }
 ].map((spell) => {
   return {
