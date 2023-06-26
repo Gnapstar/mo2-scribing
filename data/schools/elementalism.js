@@ -4,73 +4,73 @@ export default [
     min: 0,
     max: 20,
     price: "-",
-    location: ""
+    location: "Tindrem, Toxai, Jungle Camp"
   }, {
     spell: "Elemental Aggregation Scroll",
     min: 25,
     max: 50,
     price: "-",
-    location: ""
+    location: "Tindrem, Toxai, Jungle Camp"
   }, {
     spell: "Scroll of Elemental Fire",
     min: 0,
     max: 20,
     price: "-",
-    location: ""
+    location: "Tindrem"
   }, {
     spell: "Scroll of Elemental Earth",
     min: 0,
     max: 20,
     price: "-",
-    location: ""
+    location: "Tindrem, Toxai, Jungle Camp"
   }, {
     spell: "Scroll of Elemental Heat",
     min: 15,
     max: 30,
     price: "-",
-    location: ""
+    location: "Tindrem"
   }, {
     spell: "Scroll of Elemental Dust",
     min: 20,
     max: 35,
     price: "-",
-    location: ""
+    location: "Tindrem"
   }, {
     spell: "Scroll of Elemental Water",
     min: 0,
     max: 20,
     price: "-",
-    location: ""
+    location: "Toxai"
   }, {
     spell: "Scroll of Elemental Darkness",
     min: 15,
     max: 30,
     price: "-",
-    location: ""
+    location: "Toxai"
   }, {
     spell: "Scroll of Elemental Cold",
     min: 15,
     max: 30,
     price: "-",
-    location: ""
+    location: "Toxai"
   }, {
     spell: "Scroll of Elemental Air",
     min: 0,
     max: 20,
     price: "-",
-    location: ""
+    location: "Jungle Camp"
   }, {
     spell: "Scroll of Elemental Light",
     min: 15,
     max: 30,
     price: "-",
-    location: ""
+    location: "Jungle Camp"
   }, {
     spell: "Scroll of Elemental Vapor",
     min: 20,
     max: 35,
     price: "-",
-    location: ""
+    location: "Jungle Camp"
   }, {
     spell: "Scroll of Elemental Direction",
     min: 65,
