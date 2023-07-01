@@ -17,6 +17,17 @@ const SPELLS = [
   ...ELEMENTALISM
 ].map((spell) => {
   return {
+    ...{
+      description: "",
+      heal: "",
+      damage: "",
+      mana: 0,
+      range: 0,
+      speed: "",
+      castTime: 0,
+      skillRange: "",
+      alignment: "",
+    },
     ...spell,
     ...{
       chance: 0,

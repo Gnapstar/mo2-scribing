@@ -8,9 +8,9 @@
         <b-form-checkbox
           v-for="school in schools"
           :key="`school-${school}`"
+          v-model="selectedSchools"
           name="selected-schools"
           :value="school"
-          v-model="selectedSchools"
           inline
         >
           {{ school }} <span class="text-muted">({{ getSpellsBySchools(school).length }})</span>
@@ -38,6 +38,68 @@
 
       <template #cell(chance)="data">
         {{ data.item.chance }}%
+      </template>
+
+      <template #cell(more)="data">
+        <b-button v-b-modal="`spell-${data.item.spell}`" variant="primary" size="sm">
+          Show
+        </b-button>
+
+        <b-modal
+          :id="`spell-${data.item.spell}`"
+          :title="data.item.spell"
+          ok-only
+          ok-title="Close"
+        >
+          <template v-if="data.item.description">
+            <h3>Spell</h3>
+
+            <div class="mb-3">
+              <label class="text-warning mb-0">Description</label>
+              <p>
+                {{ data.item.description }}
+              </p>
+            </div>
+
+            <table class="table">
+              <tbody>
+                <tr v-for="property in spellPropertiesForSpell(data.item)" :key="property">
+                  <td class="text-warning">{{ property }}</td>
+                  <td class="col-shrink">{{ data.item[property] }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </template>
+
+          <h3>Scribing</h3>
+          <div class="mb-3">
+            <label class="text-warning mb-0">Magic School</label>
+            <p>
+              {{ data.item.school }}
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label class="text-warning mb-0">Scribe Level Requirements</label>
+            <p>
+              {{ data.item.min }} - {{ data.item.max }}
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label class="text-warning mb-0">Price</label>
+            <p>
+              {{ formatPrice(data.item.price) || "-" }}
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label class="text-warning mb-0">Scroll Location</label>
+            <p>
+              {{ data.item.location }}
+            </p>
+          </div>
+        </b-modal>
       </template>
 
       <template #custom-foot>
@@ -69,6 +131,17 @@
 import { mapGetters } from "vuex";
 import { Helpers } from "~/plugins/helpers";
 
+const SPELL_PROPERTIES = [
+  "heal",
+  "damage",
+  "mana",
+  "range",
+  "speed",
+  "castTime",
+  "skillRange",
+  "alignment",
+];
+
 export default {
   name: 'IndexPage',
 
@@ -76,6 +149,8 @@ export default {
 
   data() {
     return {
+      spellProperties: SPELL_PROPERTIES,
+
       selectedSchools: [],
       fields: [
         {
@@ -98,7 +173,9 @@ export default {
           formatter: (value) => this.formatPrice(value),
           tdClass: "text-nowrap"
         }, {
-          key: "location",
+          key: "more",
+          label: "",
+          tdClass: "col-shrink"
         },
       ],
     }
@@ -155,6 +232,12 @@ export default {
       this.$store.commit("spells/setScribed", {
         spell,
         scribed
+      });
+    },
+
+    spellPropertiesForSpell(spell) {
+      return this.spellProperties.filter((property) => {
+        return !!spell[property];
       });
     },
   }
