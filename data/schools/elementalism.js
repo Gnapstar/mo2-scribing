@@ -77,6 +77,12 @@ export default [
     max: 90,
     price: "-",
     location: ""
+  }, {
+    spell: "Scroll of Elemental Polarization",
+    min: 85,
+    max: 100,
+    price: "-",
+    location: ""
   }
 ].map((spell) => {
   return {
