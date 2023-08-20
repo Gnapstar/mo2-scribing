@@ -6,6 +6,12 @@ export default [
     price: "-",
     location: "Tindrem, Toxai, Jungle Camp"
   }, {
+    spell: "Scroll of Emanation",
+    min: 15,
+    max: 30,
+    price: "-",
+    location: "-"
+  }, {
     spell: "Elemental Aggregation Scroll",
     min: 25,
     max: 50,
@@ -75,6 +81,12 @@ export default [
     spell: "Scroll of Elemental Direction",
     min: 65,
     max: 90,
+    price: "-",
+    location: ""
+  }, {
+    spell: "Scroll of Elemental Arrangement",
+    min: 45,
+    max: 70,
     price: "-",
     location: ""
   }, {
