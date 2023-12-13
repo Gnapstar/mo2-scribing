@@ -183,7 +183,7 @@ export default [
     spell: "Earthquake",
     min: 75,
     max: 100,
-    price: 5000,
+    price: 10000,
     location: "Veteran Bandit Caster, Alchemist Bowman, Illusionist",
 
     description: "An area effect spell that causing damage and likely knockdown to all targets in the area, including the caster.",

@@ -264,7 +264,7 @@ export default {
     },
 
     getLowestPricedScroll(scrolls) {
-      return scrolls.reduce((min, p) => !!p.price && p.price < min.price ? p : min, scrolls[0]);
+      return scrolls.reduce((min, p) => !!p.price && Number(p.price) && p.price < min.price ? p : min, scrolls[0]);
     },
 
     getAvailableScrolls(level) {

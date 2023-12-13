@@ -87,7 +87,7 @@ export default [
     spell: "Atrophy",
     min: 74,
     max: 87,
-    price: 70000,
+    price: 42500,
     location: "Coffers in dungeon",
 
     description: "Fill whatever the spell is cast on with black smoke, reducing a persons stamina regeneration or causing creatures to move slower.",
@@ -129,7 +129,7 @@ export default [
     spell: "Miasma",
     min: 55,
     max: 67,
-    price: 120000,
+    price: 80000,
     location: "Jungle camp, item to trade drops from Sators",
 
     description: "Create a green clou dof corrosive fumes surrounding whatever the spell is cast upon, harming any who come into contact with them.",
