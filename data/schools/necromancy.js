@@ -3,7 +3,7 @@ export default [
     spell: "Raise Walker",
     min: 1,
     max: 22,
-    price: 50,
+    price: 100,
     location: "Necromancers at ruins",
 
     description: "Reanimate a corpse, creating an entity known as a walker.",
@@ -17,7 +17,7 @@ export default [
     spell: "Raise Greater Walker",
     min: 34,
     max: 46,
-    price: 55000,
+    price: 75000,
     location: "Necromancers at ruins",
 
     description: "Reanimate a corpse, creating a powerful form of an entity known as a walker.",
@@ -31,7 +31,7 @@ export default [
     spell: "Raise Strong Walker",
     min: 19,
     max: 37,
-    price: 1000,
+    price: 500,
     location: "Necromancers at ruins",
 
     description: "Reanimate a corpse, creating a strong form of an entity known as a walker.",
@@ -73,7 +73,7 @@ export default [
     spell: "Benumb Mind",
     min: 64,
     max: 77,
-    price: 12000,
+    price: 17000,
     location: "Coffers in dungeon",
 
     description: "Numb the mind of whatever the spell is cast on, temporarily severing a persons connection to new mana or preventing a creature from casting magic.",
@@ -87,7 +87,7 @@ export default [
     spell: "Atrophy",
     min: 74,
     max: 87,
-    price: 42500,
+    price: 60000,
     location: "Coffers in dungeon",
 
     description: "Fill whatever the spell is cast on with black smoke, reducing a persons stamina regeneration or causing creatures to move slower.",
@@ -101,7 +101,7 @@ export default [
     spell: "Death Hand",
     min: 45,
     max: 59,
-    price: 4500,
+    price: 7500,
     location: "Necromancer in dungeon",
 
     description: "Sap the life of any living thing the spell is cast upon, extracting its vitality and using it to restore your own.",
@@ -115,7 +115,7 @@ export default [
     spell: "Cloud of Ashes",
     min: 1,
     max: 25,
-    price: 800,
+    price: 1000,
     location: "Coffers in dungeon and Descensus Priests",
 
     description: "Creating a blinding black sphere of ash around whatever the spell is cast on, that will slightly and continually harm anthing caught inside.",
@@ -129,7 +129,7 @@ export default [
     spell: "Miasma",
     min: 55,
     max: 67,
-    price: 80000,
+    price: 30000,
     location: "Jungle camp, item to trade drops from Sators",
 
     description: "Create a green clou dof corrosive fumes surrounding whatever the spell is cast upon, harming any who come into contact with them.",
@@ -143,7 +143,7 @@ export default [
     spell: "Akh Bond",
     min: 60,
     max: 70,
-    price: 2000,
+    price: 10000,
     location: "Coffers in dungeon and Descensus Priests",
 
     description: "Bind your Akh with the Akh of an entity you control, transfering a portion of any damage dealt to you onto them.",
@@ -157,7 +157,7 @@ export default [
     spell: "Blind",
     min: 38,
     max: 55,
-    price: 2000,
+    price: 3000,
     location: "Coffers in dungeon and Descensus Priests",
 
     description: "Partially blind someone for a short time.",
@@ -171,7 +171,7 @@ export default [
     spell: "Mental Leech",
     min: 83,
     max: 100,
-    price: 3500,
+    price: 7000,
     location: "Coffers in dungeon and Descensus Priests",
 
     description: "Siphon mana from whatever the spell is cast on, slowly replenishing your own in the process.",
@@ -185,7 +185,7 @@ export default [
     spell: "Sacrificial Heal",
     min: 5,
     max: 18,
-    price: 300,
+    price: 800,
     location: " Necromancers at ruins",
 
     description: "Harness the remaining power found in a reanimated body under your control to heal yourself at the cost of the reanimated body itself.",
@@ -199,7 +199,7 @@ export default [
     spell: "Auw Surge",
     min: 85,
     max: 92,
-    price: 4500,
+    price: 8000,
     location: "Descensus High Priest",
 
     description: "Release a columns of spiritual energy, harming anyone it passes through.",
@@ -213,7 +213,7 @@ export default [
     spell: "Crawling Hand",
     min: 56,
     max: 69,
-    price: 9000,
+    price: 28000,
     location: "Coffers in dungeon",
 
     description: "Conjure spectral hands of sirit energy to pull bags of items closer to you.",
@@ -227,7 +227,7 @@ export default [
     spell: "Sacrificial Eruption",
     min: 3,
     max: 16,
-    price: 200,
+    price: 800,
     location: " Necromancers at ruins",
 
     description: "Instruct reanimated bodies under your control to violently erupt around the recipient of the spell.",

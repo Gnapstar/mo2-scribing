@@ -15,37 +15,37 @@ export default [
     spell: "Elemental Aggregation Scroll",
     min: 25,
     max: 50,
-    price: 4000,
+    price: 4500,
     location: "Tindrem, Toxai, Jungle Camp"
   }, {
     spell: "Scroll of Elemental Fire",
     min: 0,
     max: 20,
-    price: 25,
+    price: 2500,
     location: "Tindrem"
   }, {
     spell: "Scroll of Elemental Earth",
     min: 0,
     max: 20,
-    price: 1500,
+    price: 2500,
     location: "Tindrem, Toxai, Jungle Camp"
   }, {
     spell: "Scroll of Elemental Heat",
     min: 15,
     max: 30,
-    price: 5000,
+    price: 8000,
     location: "Tindrem"
   }, {
     spell: "Scroll of Elemental Dust",
     min: 20,
     max: 35,
-    price: 7000,
+    price: 8000,
     location: "Tindrem"
   }, {
     spell: "Scroll of Elemental Water",
     min: 0,
     max: 20,
-    price: 4500,
+    price: 2500,
     location: "Toxai"
   }, {
     spell: "Scroll of Elemental Darkness",
@@ -57,43 +57,43 @@ export default [
     spell: "Scroll of Elemental Cold",
     min: 15,
     max: 30,
-    price: 8000,
+    price: 9000,
     location: "Toxai"
   }, {
     spell: "Scroll of Elemental Air",
     min: 0,
     max: 20,
-    price: 6500,
+    price: 3000,
     location: "Jungle Camp"
   }, {
     spell: "Scroll of Elemental Light",
     min: 15,
     max: 30,
-    price: 8000,
+    price: 7500,
     location: "Jungle Camp"
   }, {
     spell: "Scroll of Elemental Vapor",
     min: 20,
     max: 35,
-    price: 10000,
+    price: 8000,
     location: "Jungle Camp"
   }, {
     spell: "Scroll of Elemental Direction",
     min: 65,
     max: 90,
-    price: 8000,
+    price: 7000,
     location: ""
   }, {
     spell: "Scroll of Elemental Arrangement",
     min: 45,
     max: 70,
-    price: 6000,
+    price: 7500,
     location: ""
   }, {
     spell: "Scroll of Elemental Polarization",
     min: 85,
     max: 100,
-    price: 5000,
+    price: 11500,
     location: ""
   }
 ].map((spell) => {

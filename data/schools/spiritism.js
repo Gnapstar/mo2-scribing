@@ -48,7 +48,7 @@ export default [
     spell: "Ether Momentum",
     min: 20,
     max: 45,
-    price: 100,
+    price: 1000,
     location: "Minotaur Dungeon",
 
     description: "Increase the targets movement speed in the etherworld.",
@@ -63,7 +63,7 @@ export default [
     spell: "Ether Barrier",
     min: 30,
     max: 55,
-    price: 700,
+    price: 2000,
     location: "Risar Dungeon",
 
     description: "Make the target take less Kau damage.",
@@ -108,7 +108,7 @@ export default [
     spell: "Mental Projectile",
     min: 60,
     max: 85,
-    price: 3500,
+    price: 7500,
     location: "Sator Dungeon",
 
     description: "Releases a concentrated beam of spirits that instantly drain Kau from your target.",
@@ -153,7 +153,7 @@ export default [
     spell: "Etherworld Portal",
     min: 80,
     max: 100,
-    price: 3000,
+    price: 3500,
     location: "Spiritism Trader (Forest Troll Head)",
 
     description: "Open a portal that allows for crossing between the world of the living and the ether.",

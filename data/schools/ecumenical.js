@@ -138,7 +138,7 @@ export default [
     spell: "Greater Heal",
     min: 50,
     max: 75,
-    price: 500,
+    price: 300,
     location: "Bandit Healer",
 
     description: "A powerful healing spell.",
@@ -153,7 +153,7 @@ export default [
     spell: "Fulmination",
     min: 60,
     max: 85,
-    price: 1200,
+    price: 800,
     location: "Bandit Caster",
 
     description: "An unusual tactical spell that causes the target to suffer explosive damage after a noticeable delay.",
@@ -168,7 +168,7 @@ export default [
     spell: "Flamestrike",
     min: 70,
     max: 95,
-    price: 1000,
+    price: 800,
     location: "Bandit Caster",
 
     description: "An in your face, short range, high damage spell dealing serious fire damage to the target.",
@@ -183,7 +183,7 @@ export default [
     spell: "Earthquake",
     min: 75,
     max: 100,
-    price: 10000,
+    price: 7000,
     location: "Veteran Bandit Caster, Alchemist Bowman, Illusionist",
 
     description: "An area effect spell that causing damage and likely knockdown to all targets in the area, including the caster.",
