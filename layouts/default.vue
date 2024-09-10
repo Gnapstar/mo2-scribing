@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg" type="dark">
       <b-container>
         <b-navbar-brand href="#">
-          <img src="https://placekitten.com/g/30/30" class="d-inline-block align-top" alt="Kitten">
+          <img src="https://placebear.com/g/30/30" class="d-inline-block align-top" alt="Kitten">
           MO2 Scribing
         </b-navbar-brand>
 
